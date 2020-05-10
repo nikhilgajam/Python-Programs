@@ -63,7 +63,7 @@ while True:
 
 
 if user_points > comp_points:
-    print("\n\nYou Won", "\nYou Got:", user_points, "Point(s)", "\nComputer Got:", comp_points, "Point(s)",)
+    print("\n\nYou Won", "\nYou Got:", user_points, "Point(s)", "\nComputer Got:", comp_points, "Point(s)")
 elif user_points == comp_points:
     print("\n\nTie", "\nComputer Got:", comp_points, "Point(s)", "\nYou Got:", user_points, "Point(s)")
 else:
