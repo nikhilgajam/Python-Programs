@@ -14,7 +14,6 @@ comp_points = 0
 count = 0
 
 while True:
-    
     count += 1
 
     user = input("\nIteration " + str(count) + " Enter: r (or) p (or) s: ").lower()
