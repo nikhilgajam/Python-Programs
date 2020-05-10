@@ -29,9 +29,14 @@ while True:
     elif 'q' in user:
         break
     else:
+        entered = "else"
         print("Enter Instructed Letters Only")
 
     comp = random.choice(items)
+
+    if entered == "else":
+        continue
+
     print("Computer:", comp)
 
     if comp == entered:
