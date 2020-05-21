@@ -41,6 +41,7 @@ def password_generator():
             connect.commit()
             connect.close()
             print("\nSaved Successfully")
+            
         except Exception as ex:
             print("Error:", ex)
 
