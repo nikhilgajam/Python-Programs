@@ -54,7 +54,6 @@ def modify():
 
                     q.write(rno + '_' + name + '_' + age + ',')
 
-
             except IndexError:
                 pass
 
@@ -103,7 +102,6 @@ def delete():
 
                     q.write(rno + '_' + name + '_' + age + ',')
 
-
             except IndexError:
                 pass
 
@@ -123,12 +121,17 @@ def delete():
 
 
 def search():
-    sear = str(input("Enter Roll No: "))
-    print()
+    data = sear = ""
 
-    with open("record.txt", "r") as p:
-        data = p.read()
+    try:
+        with open("record.txt", "r") as p:
+            data = p.read()
         data = data.split(',')
+
+        sear = str(input("Enter Roll No: "))
+
+    except FileNotFoundError:
+        print("\nRecord.txt did not exist")
 
     c = 0
 
@@ -159,16 +162,19 @@ def search():
 
 
 def show_all():
-    with open("record.txt", "r") as p:
-        data = p.read()
-        data = data.split(',')
+    try:
+        with open("record.txt", "r") as p:
+            data = p.read()
+            data = data.split(',')
+    except FileNotFoundError:
+        print("\nNo Files To Show (record.txt did not exist)")
 
     c = 0
     print()
     print("_________________________________________________________________\n")
 
-    for i in data:
-        try:
+    try:
+        for i in data:
             doc = i.split('_')
             rno = doc[0]
             name = doc[1]
@@ -178,9 +184,9 @@ def show_all():
             print('Name:', name)
             print('Age:', age)
             print()
-        except IndexError:
-            pass
-        c += 1
+    except IndexError and UnboundLocalError:
+        pass
+    c += 1
 
     print("_________________________________________________________________\n")
 
@@ -202,25 +208,33 @@ while True:
         sel = int(input("Enter: "))
 
         if sel == 1:
+
             add()
+
         elif sel == 2:
+
             modify()
+
         elif sel == 3:
+
             delete()
+
         elif sel == 4:
+
             search()
+
         elif sel == 5:
+
             show_all()
+
         elif sel == 0:
+
             print("\nThanks for using")
             break
+
         else:
+
             print("\nEnter Instructed Numbers\n")
 
     except ValueError:
         print("\nEnter Instructed Numbers\n")
-
-
-
-
-
