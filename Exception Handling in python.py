@@ -15,7 +15,7 @@ except (ValueError, TypeError):
 
     print("Enter integer(int) values only")
 
-except Exception as ex:     # ex contains what error it is and prints it
+except Exception as ex:     # ex contains the error and we can print it
 
     print("Error:", ex)
 
