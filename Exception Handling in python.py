@@ -25,7 +25,7 @@ except:
     
 finally:
     
-    print("This finally code will be executed before execucting other lines irrespective of any error")
+    print("This finally code will be executed before executing other lines irrespective of any error")
 
 
 
