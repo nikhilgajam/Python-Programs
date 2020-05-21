@@ -1,5 +1,6 @@
 import sqlite3
 import random
+import pyperclip as pc
 
 print("Password Generator And Keeper")
 
@@ -8,13 +9,20 @@ def password_generator():
 
     string = "1234567890!@#$%&*qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM."
     try:
+
         length = int(input("\nEnter Password Length (1-70): "))
         generate = "".join(random.sample(string, length))
 
-        print("\n"+generate)
+        print("\n"+generate + "\t===>  Copied to clipboard")
+        pc.copy(generate)
 
     except ValueError:
+
         print("Enter Only Numbers")
+        return
+
+    except Exception as ex:
+        print(ex)
         return
 
     x = input("\nDo you want to save this password (Yes/No): ")
