@@ -22,7 +22,7 @@ def addmat():
     
     for i in range(row):
         c.append(col*[0])
-    
+        
     print(c)
 
     print("\nEnter matrix 1 elements: ")
