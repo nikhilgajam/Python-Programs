@@ -10,11 +10,19 @@ Regular Expressions Shorthand Character Sets
 \\s    Whitespace character [\t\n\r]
 \\S    Non-whitespace [^\\s]
 
+
 Dot(.)           . is used to get one word before dot(.) except \n with all after it
 Question(?)      ? is used to represent (Optional) zero or one repeated character(s) before it
 Plus(+)          + is used to represent more like that preceding it
 Asterisk(*)      * is used to get zero or one repetition character(s)
 Pipe(|)          | is used to represent connectivity with other character(s)
+
+()               Parentheses() means gets the value from the parentheses
+[]               Square Brackets[] means only one digit inside it like [0-9] or [a-z]
+
+
+
+You just need to write type single slash like \t just wrote \\ to indicate single slash
 
 
 """
