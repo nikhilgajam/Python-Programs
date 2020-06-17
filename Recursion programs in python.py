@@ -73,5 +73,26 @@ def even_odd_count_rec(num, ec=0, oc=0, tsum=0):
         return ec, oc, tsum
 
 
+def gcd_rec(num1, num2):
+    if num2 != 0:
+        return gcd_rec(num2, num1 % num2)
+    else:
+        return num1
+
+
+def lcm_rec(num1, num2):
+
+    gcd = gcd_rec(num1, num2)
+
+    return int((num1 * num2)/gcd)
+
+
+def power_rec(base, power):
+    if power != 0:
+        return base * power_rec(base, power-1)
+    else:
+        return 1
+
+
 k = even_odd_count_rec(1000)
 print(k)
