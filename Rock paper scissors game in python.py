@@ -1,12 +1,12 @@
 import random
 
-print("Rock Paper Scissor Game\n")
+print("Rock Paper Scissors Game\n")
 
-items = ["Rock", "Paper", "Scissor"]
+items = ["Rock", "Paper", "Scissors"]
 
 print("Enter r: Rock")
 print("Enter p: Paper")
-print("Enter s: Scissor")
+print("Enter s: Scissors")
 print("Enter q: Quit")
 
 user_points = 0
@@ -25,7 +25,7 @@ while True:
     elif 'p' in user:
         entered = "Paper"
     elif 's' in user:
-        entered = "Scissor"
+        entered = "Scissors"
     elif 'q' in user:
         break
     else:
@@ -47,17 +47,17 @@ while True:
     elif comp == "Paper" and entered == "Rock":
         print("Computer Got A Point: Paper Covered The Rock")
         comp_points += 1
-    elif comp == "Scissor" and entered == "Rock":
-        print("You Got A Point: Rock Smashed The Scissor")
+    elif comp == "Scissors" and entered == "Rock":
+        print("You Got A Point: Rock Smashed The Scissors")
         user_points += 1
-    elif comp == "Rock" and entered == "Scissor":
-        print("Computer Got A Point: Rock Smashed The Scissor")
+    elif comp == "Rock" and entered == "Scissors":
+        print("Computer Got A Point: Rock Smashed The Scissors")
         comp_points += 1
-    elif comp == "Paper" and entered == "Scissor":
-        print("You Got A Point: Scissor Cuts The Paper")
+    elif comp == "Paper" and entered == "Scissors":
+        print("You Got A Point: Scissors Cuts The Paper")
         user_points += 1
-    elif comp == "Scissor" and entered == "Paper":
-        print("Computer Got A Point: Scissor Cuts The Paper ")
+    elif comp == "Scissors" and entered == "Paper":
+        print("Computer Got A Point: Scissors Cuts The Paper ")
         comp_points += 1
 
 
