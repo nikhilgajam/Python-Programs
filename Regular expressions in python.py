@@ -78,6 +78,15 @@ def get_emails_with_multiple_dots(string):
         return None
 
 
+def any_email(string):
+    match = re.findall(r'[\w.-]+@[\w.-]+', string)   # [\w.-]+ means single or multiple occurrences of dot and dash
+
+    if match:
+        return match
+    else:
+        return None
+
+
 def get_correct_emails(string):
     regex = re.compile(r'(\D\w+@\w+)(.com|.in|.co.uk|.us|.ac.in|.co.in)')  # Only specified using | (No spaces)
     match = regex.findall(string)
